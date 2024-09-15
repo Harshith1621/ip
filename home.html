@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RentRide Cars</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="/img/logo.png" alt="RentRide Cars Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/html/index.html">HOME</a></li>
+            <li><a href="/html/about.html">ABOUT US</a></li>
+            <li><a href="/html/cars.html">PICK YOUR WHEELS</a></li>
+            <li><a href="/html/contact.html">CONTACT US</a></li>
+            <li><a href="/html/plans.html">OUR PLANS</a></li>
+          </ul>
+        </nav>
+        <div class="search-bar">
+          <input type="text" placeholder="Search Your Car" />
+          <button>🔍</button>
+        </div>
+        <div class="login">
+          <a href="login.html">LOGIN / REGISTER</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-text">
+          <div class="content">
+            <h1>
+              WHY BUY A CAR?<br />
+              JUST RENT ONE!
+            </h1>
+            <p>
+              Maintaining a car is always a hassle. The increasing petrol
+              prices, having to service it regularly and keeping it clean will
+              sometimes make you consider renting rather than buying.
+            </p>
+
+            <button>
+              <a href="/html/cars.html" class="vehicles">SEE ALL VEHICLES</a>
+            </button>
+          </div>
+        </div>
+        <div class="booking-form">
+          <h3>Book your car</h3>
+          <div class="heading">
+            <form id="bookingForm">
+              <label for="pickup">Pick Up Location</label>
+              <select id="pickup" required class="cities">
+                <option value="Nil">select Location</option>
+                <option value="Airport">Airport</option>
+                <option value="Ponnamalle">Ponnamalle</option>
+                <option value="Koyambedu">Koyambedu</option>
+                <option value="Anna Nagar">Anna Nagar</option>
+              </select>
+
+              <div class="date-time-grid">
+                <div>
+                  <label for="pickupdate">Pick Up Date</label>
+                  <input type="date" id="pickupdate" required />
+                </div>
+                <div>
+                  <label for="pickuphour">Pick Up Hour</label>
+                  <input type="time" id="pickuphour" required />
+                </div>
+              </div>
+
+              <label for="drop">Drop Location</label>
+              <select id="drop" class="cities" required>
+                <option value="Nil">select Location</option>
+                <option value="Airport">Airport</option>
+                <option value="Ponnamalle">Ponnamalle</option>
+                <option value="Koyambedu">Koyambedu</option>
+                <option value="Anna Nagar">Anna Nagar</option>
+              </select>
+
+              <div class="date-time-grid">
+                <div>
+                  <label for="dropdate">Drop Date</label>
+                  <input type="date" id="dropdate" required />
+                </div>
+                <div>
+                  <label for="drophour">Drop Hour</label>
+                  <input type="time" id="drophour" required />
+                </div>
+              </div>
+
+              <button type="submit">FIND THE CAR</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document
+        .getElementById("bookingForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          // Redirect to the "Find Your Wheels" page
+          window.location.href = "cars.html"; // Redirects to the cars.html page
+        });
+    </script>
+  </body>
+</html>
